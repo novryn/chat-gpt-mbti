@@ -21,29 +21,61 @@
 
       body {
         font-family: S-CoreDream-3Light;
+        background-color: #f8f9fa;
+        margin: 0;
+      }
+
+      /* 화면 정중앙 배치 */
+      .wrapper {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      /* 카드 고정 크기 + 반응형 */
+      .card {
+        width: 100%;
+        max-width: 500px; /* 데스크탑에서 카드 최대 크기 */
+        min-height: 350px; /* 항상 일정한 높이 유지 */
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        border-radius: 12px;
+      }
+
+      /* 버튼 간격 */
+      .d-grid button {
+        padding: 12px;
+        font-size: 1.1rem;
       }
     </style>
     <title>MBTI</title>
   </head>
 
   <body>
-    <div class="container d-flex flex-column min-vh-100 justify-content-center align-items-center">
-      <h1 class="text-center mb-5">MBTI 테스트</h1>
-      <div class="row justify-content-center">
-        <div class="col-10 col-md-8 col-lg-6">
-          <div class="card shadow">
-            <div class="card-body">
-              <h2 class="card-title mb-4" id="question-number">질문 1</h2>
-              <p class="card-text mb-4" id="question">
-                이번 주말에는 집에서 푹 쉬면서 영화나 드라마를 보려고 한다.
-              </p>
-              <div class="d-grid gap-2">
-                <button class="btn btn-primary" type="button" id="yes-button">
-                  예
-                </button>
-                <button class="btn btn-secondary" type="button" id="no-button">
-                  아니오
-                </button>
+    <div class="wrapper">
+      <div class="container">
+        <h1 class="text-center mb-5">MBTI 테스트</h1>
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-8 col-lg-6">
+            <div class="card">
+              <div class="card-body d-flex flex-column justify-content-between">
+                <!-- 질문 번호 -->
+                <div>
+                  <h2 class="card-title mb-4 text-center" id="question-number">질문 1</h2>
+                  <p class="card-text mb-4 text-center" id="question">
+                    이번 주말에는 집에서 푹 쉬면서 영화나 드라마를 보려고 한다.
+                  </p>
+                </div>
+
+                <!-- 버튼 영역 -->
+                <div class="d-grid gap-2">
+                  <button class="btn btn-primary" type="button" id="yes-button">
+                    예
+                  </button>
+                  <button class="btn btn-secondary" type="button" id="no-button">
+                    아니오
+                  </button>
+                </div>
               </div>
             </div>
           </div>
